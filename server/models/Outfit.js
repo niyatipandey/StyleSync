@@ -7,13 +7,26 @@ const outfitSchema = new mongoose.Schema({
         required:true
     },
     slots:{
-        type:Object,
-        required:true,
-        default:null
-    },
-    savedAt:{
-        type:Date,
-        default:Date.now()
+        tops:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref = 'ClothingItem',
+            default:null
+        },
+        bottom:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref = 'ClothingItem',
+            default:null
+        },
+        shoes:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref = 'ClothingItem',
+            default:null
+        },
+        accessory:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref = 'ClothingItem',
+            default:null
+        }
     },
 },{timestamps:true})
 
