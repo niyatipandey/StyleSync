@@ -36,6 +36,9 @@ async function handlePostOutfit(req,res){
 async function handleDeleteOutfit(req,res){
     try{
         const id = req.params.id;
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({message: "Invalid item id"});
+        }
         const deletedOutfit = await Outfit.findOneAndDelete({
             _id:id,
             userId:req.user.id

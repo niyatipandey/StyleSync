@@ -1,4 +1,5 @@
 const ClothingItems = require('../models/ClothingItem')
+const mongoose = require('mongoose')
 
 async function handleGetItems(req,res){
     try{
@@ -19,6 +20,9 @@ async function handleGetItems(req,res){
 async function handleGetItemsById(req,res){
     try{
         const id = req.params.id;
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({message: "Invalid item id"});
+        }
         const item = await ClothingItems.findById(id);
         if(!item){
             return res.status(404).json({message:"Item not found"});
