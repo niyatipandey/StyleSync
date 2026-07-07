@@ -6,7 +6,7 @@ async function handleRegister(req,res){
     const {name,email,password} = req.body;
     try{
         if(!name || !email || !password){
-            return res.status(400).json("Required all Credentials") 
+            return res.status(400).json({message:"Required all Credentials"}) 
         }
 
         const userExist =await User.findOne({email});
@@ -35,14 +35,14 @@ async function handleLogin(req,res){
         }
         const userExist = await User.findOne({email});
         if(!userExist){
-            return res.status(404).json("User not found");
+            return res.status(404).json({message:"User not found"});
         }
         const result =await  bcrypt.compare(password,userExist.passwordHash);
         if(!result){
-            return res.status(401).json("Something went wrong");
+            return res.status(401).json({message:"Something went wrong"});
         }
         const token = jwt.sign({id:userExist._id},process.env.JWT_SECRET,{expiresIn:'7d'});
-        return res.status(200).json(token)
+        return res.status(200).json({token})
     }catch(err){
         return res.status(500).json({message:err.message});
     }

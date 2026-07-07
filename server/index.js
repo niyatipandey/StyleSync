@@ -8,6 +8,14 @@ require('dotenv').config()
 const app = express();
 const port = process.env.PORT || 3000;
 
+const cors = require('cors');
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+  ],
+  methods: ["GET", "POST", "PATCH", "DELETE"],
+}));
+
 app.use(express.urlencoded({extended :false}));
 app.use(express.json());
 
