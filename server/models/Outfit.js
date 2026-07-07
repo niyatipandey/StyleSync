@@ -9,22 +9,22 @@ const outfitSchema = new mongoose.Schema({
     slots:{
         tops:{
             type:mongoose.Schema.Types.ObjectId,
-            ref = 'ClothingItem',
+            ref :'ClothingItem',
             default:null
         },
         bottom:{
             type:mongoose.Schema.Types.ObjectId,
-            ref = 'ClothingItem',
+            ref :'ClothingItem',
             default:null
         },
         shoes:{
             type:mongoose.Schema.Types.ObjectId,
-            ref = 'ClothingItem',
+            ref :'ClothingItem',
             default:null
         },
         accessory:{
             type:mongoose.Schema.Types.ObjectId,
-            ref = 'ClothingItem',
+            ref :'ClothingItem',
             default:null
         }
     },
