@@ -39,10 +39,17 @@ async function handleLogin(req,res){
         }
         const result =await  bcrypt.compare(password,userExist.passwordHash);
         if(!result){
-            return res.status(401).json({message:"Something went wrong"});
+            return res.status(401).json({message:"Invalid credentials"});
         }
         const token = jwt.sign({id:userExist._id},process.env.JWT_SECRET,{expiresIn:'7d'});
-        return res.status(200).json({token})
+        return res.status(200).json({
+            token,
+            user:{
+                id: userExist._id,
+                name:userExist.name,
+                email:userExist.email,
+            },
+        })
     }catch(err){
         return res.status(500).json({message:err.message});
     }
