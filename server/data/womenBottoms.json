@@ -20,7 +20,7 @@
       "casual",
       "everyday"
     ],
-    "imageUrl": "/images/women/bottoms/blue-denim-mini-skirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598598/blue-denim-mini-skirt_zt7jan.png",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "tailored",
       "classic"
     ],
-    "imageUrl": "/images/women/bottoms/black-wide-leg-trousers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598594/black-wide-leg-trousers_hcmdhm.png",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "mini skirt",
       "edgy"
     ],
-    "imageUrl": "/images/women/bottoms/black-ruched-faux-leather-mini-skirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598564/black-ruched-faux-leather-mini-skirt_ay2gpx.webp",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "summer",
       "relaxed"
     ],
-    "imageUrl": "/images/women/bottoms/cream-linen-wide-leg-pants.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598594/cream-linen-wide-leg-pants_rwvpyc.jpg",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "streetwear",
       "oversized"
     ],
-    "imageUrl": "/images/women/bottoms/black-wide-leg-cargo-pants.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598570/black-wide-leg-cargo-pants_b061jm.webp",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "jeans",
       "everyday"
     ],
-    "imageUrl": "/images/women/bottoms/blue-wide-leg-jeans.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598586/blue-wide-leg-jeans_mqkqvd.png",
     "favorite": false,
     "archived": false
   }

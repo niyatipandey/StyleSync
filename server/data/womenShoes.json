@@ -20,7 +20,7 @@
       "classic",
       "elegant"
     ],
-    "imageUrl": "/images/women/shoes/black-pointed-toe-stiletto-heels.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598619/black-pointed-toe-stiletto-heels_npqa3t.png",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "minimal",
       "comfortable"
     ],
-    "imageUrl": "/images/women/shoes/tan-strappy-flat-sandals.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598547/tan-strappy-flat-sandals_bz70l4.jpg",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "versatile",
       "classic"
     ],
-    "imageUrl": "/images/women/shoes/beige-ballet-flats.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598593/beige-ballet-flats_w7ojjn.jpg",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "winter",
       "classic"
     ],
-    "imageUrl": "/images/women/shoes/brown-block-heel-ankle-boots.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598547/brown-block-heel-ankle-boots_vdcnfu.jpg",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "elegant",
       "versatile"
     ],
-   "imageUrl": "/images/women/shoes/black-block-heel-sandals.png",
+   "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598600/black-block-heel-sandals_rqcsme.jpg",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "everyday",
       "versatile"
     ],
-    "imageUrl": "/images/women/shoes/white-minimal-sneakers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598547/white-minimal-sneakers_wmyzsj.jpg",
     "favorite": false,
     "archived": false
   }

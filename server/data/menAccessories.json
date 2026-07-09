@@ -20,7 +20,7 @@
       "minimal",
       "everyday"
     ],
-    "imageUrl": "/images/men/accessories/black-baseball-cap.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/black-baseball-cap_j9o24d.jpg",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "modern",
       "statement"
     ],
-    "imageUrl": "/images/men/accessories/silver-cuban-chain.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/silver-cuban-chain_uvktnj.jpg",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "college",
       "everyday"
     ],
-    "imageUrl": "/images/men/accessories/black-everyday-backpack.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/black-everyday-backpack_t9bn0j.jpg",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "classic",
       "essential"
     ],
-    "imageUrl": "/images/men/accessories/brown-leather-wallet.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/brown-leather-wallet_fufkt2.jpg",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "classic",
       "uv protection"
     ],
-    "imageUrl": "/images/men/accessories/black-wayfarer-sunglasses.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/black-wayfarer-sunglasses_lcmfni.jpg",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "timeless",
       "everyday"
     ],
-   "imageUrl": "/images/men/accessories/silver-stainless-steel-watch.png",
+   "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/silver-stainless-steel-watch_e63tjc.jpg",
     "favorite": false,
     "archived": false
   },
@@ -170,7 +170,7 @@
       "formal",
       "essential"
     ],
-    "imageUrl": "/images/men/accessories/brown-leather-belt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/brown-leather-belt_gaxxyi.jpg",
     "favorite": false,
     "archived": false
   },
@@ -195,7 +195,7 @@
       "formal",
       "essential"
     ],
-    "imageUrl": "/images/men/accessories/black-leather-belt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598628/black-leather-belt_jezda0.jpg",
     "favorite": false,
     "archived": false
   }

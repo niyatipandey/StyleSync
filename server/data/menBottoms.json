@@ -20,7 +20,7 @@
       "minimal",
       "everyday"
     ],
-    "imageUrl": "/images/men/bottoms/black-chino-shorts.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/black-chino-shorts_p07ub3.jpg",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "summer",
       "clean"
     ],
-    "imageUrl": "/images/men/bottoms/off-white-linen-trousers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/off-white-linen-trousers_giyx1w.jpg",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "streetwear",
       "functional"
     ],
-    "imageUrl": "/images/men/bottoms/olive-cargo-pants.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598630/olive-cargo-pants_n0k53h.jpg",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "office",
       "essential"
     ],
-    "imageUrl": "/images/men/bottoms/beige-chinos.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/beige-slim-chinos_jpsuj6.jpg",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "tailored",
       "essential"
     ],
-    "imageUrl": "/images/men/bottoms/black-formal-trousers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/black-slim-formal-trousers_ss6y6c.jpg",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "everyday",
       "versatile"
     ],
-    "imageUrl": "/images/men/bottoms/light-wash-straight-leg-jeans.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598629/light-wash-straight-leg-jeans_y1niwy.jpg",
     "favorite": false,
     "archived": false
   }

@@ -20,7 +20,7 @@
       "classic",
       "versatile"
     ],
-    "imageUrl": "/images/men/shoes/tan-suede-desert-boots.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598634/tan-suede-desert-boots_cuo2ya.jpg",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "everyday",
       "casual"
     ],
-    "imageUrl": "/images/men/shoes/black-high-top-sneakers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598633/black-high-top-sneakers_p2jpgu.jpg",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "comfortable",
       "lightweight"
     ],
-    "imageUrl": "/images/men/shoes/grey-running-shoes.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598634/grey-running-shoes_itkk9s.jpg",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "leather",
       "timeless"
     ],
-    "imageUrl": "/images/men/shoes/black-chelsea-boots.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598634/black-chelsea-boots_knkxek.png",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "office",
       "classic"
     ],
-    "imageUrl": "/images/men/shoes/brown-leather-loafers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598633/brown-leather-loafers_afqmkd.jpg",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "versatile",
       "essential"
     ],
-    "imageUrl": "/images/men/shoes/white-leather-sneakers.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598634/white-leather-sneakers_vzqkat.jpg",
     "favorite": false,
     "archived": false
   }

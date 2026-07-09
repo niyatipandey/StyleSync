@@ -15,7 +15,7 @@
     "formality": 1,
     "warmth": 1,
     "tags": ["basic", "essential", "versatile", "clean", "neutral"],
-    "imageUrl": "/images/men/tops/white-crew-neck-tshirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598637/white-crew-neck-tshirt_xmabmd.jpg",
     "favorite": false,
     "archived": false
   },
@@ -35,7 +35,7 @@
     "formality": 1,
     "warmth": 1,
     "tags": ["oversized", "relaxed", "modern", "earth-tone"],
-    "imageUrl": "/images/men/tops/oversized-brown-tshirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598637/oversized-brown-tshirt_st5hzu.jpg",
     "favorite": false,
     "archived": false
   },
@@ -55,7 +55,7 @@
     "formality": 4,
     "warmth": 2,
     "tags": ["office", "classic", "essential", "formal", "timeless"],
-    "imageUrl": "/images/men/tops/white-oxford-shirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598638/white-oxford-shirt_ukubae.jpg",
     "favorite": false,
     "archived": false
   },
@@ -75,7 +75,7 @@
     "formality": 3,
     "warmth": 1,
     "tags": ["breathable", "summer", "vacation", "lightweight"],
-    "imageUrl": "/images/men/tops/cream-linen-shirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598637/cream-linen-shirt_wlr648.jpg",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
     "formality": 3,
     "warmth": 1,
     "tags": ["smart", "clean", "versatile", "essential"],
-    "imageUrl": "/images/men/tops/black-polo-shirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598636/black-polo-shirt_qctkf8.jpg",
     "favorite": false,
     "archived": false
   },
@@ -115,7 +115,7 @@
     "formality": 1,
     "warmth": 4,
     "tags": ["cozy", "winter", "comfortable", "everyday"],
-    "imageUrl": "/images/men/tops/charcoal-hoodie.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598637/charcoal-hoodie_l3tc0b.jpg",
     "favorite": false,
     "archived": false
   },
@@ -135,7 +135,7 @@
     "formality": 2,
     "warmth": 4,
     "tags": ["outerwear", "urban", "modern", "layer"],
-    "imageUrl": "/images/men/tops/black-bomber-jacket.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598636/black-bomber-jacket_dctv6x.jpg",
     "favorite": false,
     "archived": false
   },
@@ -155,7 +155,7 @@
     "formality": 2,
     "warmth": 3,
     "tags": ["utility", "layering", "military", "versatile"],
-    "imageUrl": "/images/men/tops/olive-overshirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598636/olive-overshirt_fb2qna.jpg",
     "favorite": false,
     "archived": false
   },
@@ -175,7 +175,7 @@
     "formality": 3,
     "warmth": 4,
     "tags": ["winter", "soft", "minimal", "neutral"],
-    "imageUrl": "/images/men/tops/beige-knit-sweater.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598635/beige-knit-sweater_xshmtr.jpg",
     "favorite": false,
     "archived": false
   },
@@ -195,7 +195,7 @@
     "formality": 2,
     "warmth": 3,
     "tags": ["denim", "classic", "layer", "casual"],
-    "imageUrl": "/images/men/tops/light-wash-denim-jacket.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598638/light-wash-denim-jacket_nxfmpj.jpg",
     "favorite": false,
     "archived": false
   }

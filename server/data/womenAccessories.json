@@ -20,7 +20,7 @@
       "timeless",
       "wardrobe essential"
     ],
-    "imageUrl": "/images/women/accessories/black-leather-belt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598567/black-leather-belt_dka2c2.png",
     "favorite": false,
     "archived": false
   },
@@ -45,7 +45,7 @@
       "classic",
       "versatile"
     ],
-    "imageUrl": "/images/women/accessories/brown-leather-belt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598570/brown-leather-belt_cxeqj6.png",
     "favorite": false,
     "archived": false
   },
@@ -70,7 +70,7 @@
       "jewelry",
       "elegant"
     ],
-    "imageUrl": "/images/women/accessories/gold-clover-bracelet.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598626/gold-clover-bracelet_jleruq.png",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
       "minimal",
       "neutral"
     ],
-    "imageUrl": "/images/women/accessories/beige-shoulder-handbag.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598560/beige-shoulder-handbag_jfjmvx.png",
     "favorite": false,
     "archived": false
   },
@@ -120,7 +120,7 @@
       "daily",
       "practical"
     ],
-    "imageUrl": "/images/women/accessories/black-canvas-tote-bag.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598547/black-canvas-tote-bag_e6tmic.jpg",
     "favorite": false,
     "archived": false
   },
@@ -145,7 +145,7 @@
       "UV protection",
       "fashion"
     ],
-    "imageUrl": "/images/women/accessories/black-cat-eye-sunglasses.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598547/black-cat-eye-sunglasses_ijvix6.jpg",
     "favorite": false,
     "archived": false
   },
@@ -170,7 +170,7 @@
       "gold",
       "jewelry"
     ],
-    "imageUrl": "/images/women/accessories/gold-layered-necklace.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598554/gold-layered-necklace_nowckw.jpg",
     "favorite": false,
     "archived": false
   },
@@ -195,7 +195,7 @@
       "gold",
       "classic"
     ],
-    "imageUrl": "/images/women/accessories/gold-hoop-earrings.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598550/gold-hoop-earrings_gclxj9.jpg",
     "favorite": false,
     "archived": false
   }

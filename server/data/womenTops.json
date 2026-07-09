@@ -15,7 +15,7 @@
     "formality": 1,
     "warmth": 2,
     "tags": ["graphic tee", "oversized", "vintage"],
-    "imageUrl": "/images/women/tops/vintage-brown-graphic-oversized-tee.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598616/vintage-brown-graphic-oversized-tee_cs9okc.png",
     "favorite": false,
     "archived": false
   },
@@ -35,7 +35,7 @@
     "formality": 3,
     "warmth": 5,
     "tags": ["knit", "winter", "minimal"],
-    "imageUrl": "/images/women/tops/cream-ribbed-knit-sweater.jpg",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598589/cream-ribbed-knit-sweater_mtuevo.jpg",
     "favorite": false,
     "archived": false
   },
@@ -55,7 +55,7 @@
     "formality": 5,
     "warmth": 2,
     "tags": ["wrap", "satin", "dressy"],
-    "imageUrl": "/images/women/tops/burgundy-satin-wrap-blouse.jpg",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598568/burgundy-satin-wrap-blouse_bc1og7.jpg",
     "favorite": false,
     "archived": false
   },
@@ -75,7 +75,7 @@
     "formality": 3,
     "warmth": 1,
     "tags": ["corset", "mesh", "off shoulder"],
-    "imageUrl": "/images/women/tops/dusty-rose-mesh-corset-crop-top.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598617/dusty-rose-mesh-corset-crop-top_fbyohs.png",
     "favorite": false,
     "archived": false
   },
@@ -95,7 +95,7 @@
     "formality": 5,
     "warmth": 2,
     "tags": ["pinstripe", "office", "tailored"],
-    "imageUrl": "/images/women/tops/brown-pinstripe-fitted-shirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598567/brown-pinstripe-fitted-shirt_aovi2d.png",
     "favorite": false,
     "archived": false
   },
@@ -115,7 +115,7 @@
     "formality": 2,
     "warmth": 1,
     "tags": ["halter", "summer", "minimal"],
-    "imageUrl": "/images/women/tops/chocolate-ribbed-halter-crop-top.jpg",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598573/chocolate-ribbed-halter-crop-top_mnfh9k.jpg",
     "favorite": false,
     "archived": false
   },
@@ -135,7 +135,7 @@
     "formality": 4,
     "warmth": 1,
     "tags": ["cami", "satin", "dressy"],
-    "imageUrl": "/images/women/tops/champagne-satin-cami-top.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598588/champagne-satin-cami-top_nctnzj.png",
     "favorite": false,
     "archived": false
   },
@@ -155,7 +155,7 @@
     "formality": 4,
     "warmth": 2,
     "tags": ["oversized", "white shirt", "wardrobe essential"],
-    "imageUrl": "/images/women/tops/white-oversized-button-up-shirt.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598621/white-oversized-button-up-shirt_rykdvr.png",
     "favorite": false,
     "archived": false
   },
@@ -175,7 +175,7 @@
     "formality": 3,
     "warmth": 2,
     "tags": ["tie front", "long sleeves", "cute"],
-    "imageUrl": "/images/women/tops/white-oversized-button-up-shirt.jpg",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598570/butter-yellow-tie-front-blouse_daik6t.jpg",
     "favorite": false,
     "archived": false
   },
@@ -195,7 +195,7 @@
     "formality": 1,
     "warmth": 1,
     "tags": ["basic", "cropped", "everyday"],
-    "imageUrl": "/images/women/tops/black-basic-crop-tee.png",
+    "imageUrl": "https://res.cloudinary.com/ezw1ohrj/image/upload/v1783598626/black-basic-crop-tee_lsme4h.png",
     "favorite": false,
     "archived": false
   }
