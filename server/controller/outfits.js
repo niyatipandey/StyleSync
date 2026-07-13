@@ -1,18 +1,16 @@
 const Outfit = require('../models/Outfit')
+const mongoose = require('mongoose')
 
 async function handleGetOutfit(req,res){
     try{
-        const findOutfit = await Outfit.find({
-  userId: req.user.id
-});
-        /*const findOutfit =await Outfit.find({userId:req.user.id})
+        const findOutfit =await Outfit.find({userId:req.user.id})
             .populate("slots.top")
             .populate("slots.bottom")
             .populate("slots.shoes")
             .populate("slots.accessory")
         if(findOutfit.length === 0){
             return res.status(404).json("No outfit found")
-        }*/
+        }
         return res.status(200).json(findOutfit);
     }catch(err){
         console.log(err)

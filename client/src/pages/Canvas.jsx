@@ -49,10 +49,7 @@ const Canvas = () => {
       shoes: selectedOutfit.shoes?._id,
       accessory: selectedOutfit.accessory?._id,
       }
-      console.log("TOP:", outfitData.top);
-console.log("BOTTOM:", outfitData.bottom);
-console.log("SHOES:", outfitData.shoes);
-console.log("ACCESSORY:", outfitData.accessory);
+
       const response = await fetch(`${BASE_URL}/outfits`,{
         method:'post',
         headers:getAuthHeader(),
