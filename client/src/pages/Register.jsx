@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { Mail, Lock, Globe, ChevronDown, ArrowRight,Apple,User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import registerImg from '../assets/register_outfit_page.png'
+import toast from 'react-hot-toast';
 
 const Register = () => {
 

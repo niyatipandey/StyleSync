@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
 import { Mail, Lock, Globe, ChevronDown, ArrowRight,Apple } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Login = () => {
 

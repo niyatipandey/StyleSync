@@ -1,34 +1,48 @@
 const ai = require('../services/gemini')
 const ClothingItem = require('../models/ClothingItem')
 
-async function handleAiSuggestion(req,res) {
-    try{
-        const missingCategories =[];
-        if(!req.body.top){
-            missingCategories.push("top");
-        }
-        if(!req.body.bottom){
-            missingCategories.push("bottom");
-        }
-        if(!req.body.shoes){
-            missingCategories.push("shoes");
-        }
-        if(!req.body.accessory){
-            missingCategories.push("accessory");
+async function handleAiSuggestion(req, res) {
+    try {
+        const { top, bottom, shoes, accessory } = req.body
+
+        // Identify which slots need suggestions
+        const missingSlots = []
+        if (!top) missingSlots.push("top")
+        if (!bottom) missingSlots.push("bottom")
+        if (!shoes) missingSlots.push("shoes")
+        if (!accessory) missingSlots.push("accessory")
+
+        if (missingSlots.length === 0) {
+            return res.status(400).json({ message: "All slots are already filled." })
         }
 
+        // Fetch available items only for missing categories
         const availableItems = await ClothingItem.find({
-            category: { $in: missingCategories}
+            category: { $in: missingSlots }
         })
 
-        const wardrobeText = availableItems.map((item)=>`
-        Name: ${item.name}
-        Category: ${item.category}
-        Color: ${item.color}
-        Style: ${item.style}
-        Season: ${item.season}
-        Occasion: ${item.occasion}
-        `).join("\n")
+        // Group by category for the prompt
+        const grouped = {}
+        missingSlots.forEach(slot => {
+            grouped[slot] = availableItems
+                .filter(item => item.category === slot)
+                .map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    color: item.color,
+                    style: item.style.join(', '),
+                    occasion: item.occasion.join(', '),
+                    season: item.season.join(', '),
+                    formality: item.formality
+                }))
+        })
+
+        const filledDescription = [
+            top ? `Top: ${top.name}, Color: ${top.color}, Style: ${top.style?.join(', ')}, Occasion: ${top.occasion?.join(', ')}` : null,
+            bottom ? `Bottom: ${bottom.name}, Color: ${bottom.color}, Style: ${bottom.style?.join(', ')}` : null,
+            shoes ? `Shoes: ${shoes.name}, Color: ${shoes.color}` : null,
+            accessory ? `Accessory: ${accessory.name}, Color: ${accessory.color}` : null,
+        ].filter(Boolean).join('\n')
 
         const prompt = `
             You are an expert fashion stylist specializing in women's editorial fashion.
@@ -36,7 +50,7 @@ async function handleAiSuggestion(req,res) {
             The user has already selected these items for their outfit:
             ${filledDescription || "Nothing selected yet — suggest a complete starting look."}
 
-            Your task is to suggest ONE item for each of these missing slots: ${missingCategories.join(', ')}
+            Your task is to suggest ONE item for each of these missing slots: ${missingSlots.join(', ')}
 
             Guidelines:
             - Match colors that complement the existing items
@@ -51,42 +65,42 @@ async function handleAiSuggestion(req,res) {
             Do not include filled slots. Do not include markdown. Do not include explanations.
 
             Example format if bottom and shoes are missing:
-            {"bottom": "wb003", "shoes": "ws001"}`
+            {"bottom": "wb003", "shoes": "ws001"}
+            `
+
         const response = await ai.models.generateContent({
             model: "gemini-3.5-flash",
-            contents:prompt,
-        });
-        let suggestions;
-        try{
-            suggestions = JSON.parse(response.text)
-        }catch(err){
-            return res.status(500).json({message: "Invalif JSON returned by AI"})
-        }
-        const recommendedItems = {};
-        if(suggestions.shoes){
-            recommendedItems.shoes = await ClothingItem.findOne({
-                name: suggestions.shoes
-            })
-        }
-        if(suggestions.accessory){
-            recommendedItems.accessory = await ClothingItem.findOne({
-                name: suggestions.accessory
-            });
-        }
-        return res.json(recommendedItems)
-    }catch(err){
-        if(err.status === 429){
-            return res.status(429).json({
-                message: "AI Stylist is temporarily busy. Please try again in a few seconds."
-            });
+            contents: prompt,
+        })
+
+        const rawText = response.text.replace(/```json|```/g, '').trim()
+
+        let suggestions
+        try {
+            suggestions = JSON.parse(rawText)
+        } catch (err) {
+            return res.status(500).json({ message: "AI returned an unexpected response. Please try again." })
         }
 
-        return res.status(500).json({
-            message:"Something went wrong."
-        });
+        // Fetch full item objects using custom id
+        const recommendedItems = {}
+        for (const [slot, itemId] of Object.entries(suggestions)) {
+            if (itemId && missingSlots.includes(slot)) {
+                const item = await ClothingItem.findOne({ id: itemId })
+                if (item) recommendedItems[slot] = item
+            }
+        }
+
+        return res.status(200).json(recommendedItems)
+
+    } catch (err) {
+        if (err.status === 429) {
+            return res.status(429).json({
+                message: "AI Stylist is temporarily busy. Please try again in a few seconds."
+            })
+        }
+        return res.status(500).json({ message: err.message })
     }
 }
 
-module.exports = {
-    handleAiSuggestion
-}
+module.exports = { handleAiSuggestion }

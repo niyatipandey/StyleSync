@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { BASE_URL, getAuthHeader } from '../utils/api'
 import { useNavigate } from 'react-router-dom'
 import { OutfitCard } from '../components/OutfitCard'
+import toast from 'react-hot-toast';
 
 const Wardrobe = () => {
 
