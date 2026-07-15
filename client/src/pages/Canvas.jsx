@@ -5,6 +5,7 @@ import CanvasSlot from '../components/CanvasSlot'
 import { DndContext } from '@dnd-kit/core'
 import { BASE_URL, getAuthHeader } from '../utils/api'
 import { Loader2 } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 const Canvas = () => {
 
@@ -43,7 +44,7 @@ const Canvas = () => {
   async function saveOutfit() {
     try{
       if (!selectedOutfit.top && !selectedOutfit.bottom && !selectedOutfit.shoes && !selectedOutfit.accessory) {
-        alert("Please add at least one item.");
+        toast.error("Please add at least one item.");
         return;
       }
       const outfitData = {
@@ -60,10 +61,10 @@ const Canvas = () => {
       })
       const result = await response.json();
       if(!response.ok){
-        alert(result.message);
+        toast.error(result.message);
         return;
       }
-      alert("Outfit saved successfully!")
+      toast.success("Outfit saved successfully!")
     }catch(err){
       console.log(err);
     }
@@ -78,7 +79,7 @@ const Canvas = () => {
         selectedOutfit.shoes &&
         selectedOutfit.accessory
       ){
-        alert("Your outfit is already complete");
+        toast.error("Your outfit is already complete");
         setIsStyling(false);
         return;
       }
@@ -89,7 +90,7 @@ const Canvas = () => {
         !selectedOutfit.shoes &&
         !selectedOutfit.accessory
       ) {
-        alert("Please add at least one clothing item before using AI Stylist.");
+        toast.error("Please add at least one clothing item before using AI Stylist.");
         return;
       }
 
@@ -107,7 +108,7 @@ const Canvas = () => {
       })
       const data = await response.json();
       if(!response.ok){
-        alert(data.message);
+        toast.error(data.message);
         setIsStyling(false);
         return;
       }
@@ -118,7 +119,7 @@ const Canvas = () => {
         shoes: prev.shoes || data.shoes || null,
         accessory: prev.accessory || data.accessory || null
       }))
-      alert("✨ Outfit completed by AI!");
+      toast.success("✨ Outfit completed by AI!");
       setIsStyling(false)
     }catch(err){
       console.log(err);

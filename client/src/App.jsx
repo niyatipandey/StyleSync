@@ -9,6 +9,7 @@ import Wardrobe from './pages/Wardrobe'
 import { useContext } from 'react'
 import AuthContext from './context/AuthContext'
 import LandingPage from './pages/LandingPage'
+import { Toaster } from "react-hot-toast";
 
 const ProtectedRoute = ({children})=>{
     const {token} = useContext(AuthContext);
@@ -22,24 +23,27 @@ const ProtectedRoute = ({children})=>{
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<LandingPage />}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/>
-      <Route path='/library' element={<Library />}/>
-      <Route path='/canvas' element={
-        <ProtectedRoute>
-          <Canvas />
-        </ProtectedRoute>
-      }
-      />
-      <Route path='/wardrobe' element={
-        <ProtectedRoute>
-          <Wardrobe />
-        </ProtectedRoute>
-      }
-      />
-    </Routes>
+    <>
+      <Toaster position="top-right"/>
+      <Routes>
+        <Route path='/' element={<LandingPage />}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/library' element={<Library />}/>
+        <Route path='/canvas' element={
+          <ProtectedRoute>
+            <Canvas />
+          </ProtectedRoute>
+        }
+        />
+        <Route path='/wardrobe' element={
+          <ProtectedRoute>
+            <Wardrobe />
+          </ProtectedRoute>
+        }
+        />
+      </Routes>
+    </>
   )
 }
 

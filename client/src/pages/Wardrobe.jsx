@@ -38,11 +38,11 @@ const Wardrobe = () => {
         const result = await response.json()
 
         if(!response.ok){
-            alert(result.message);
+            toast.error(result.message);
             return;
         }
         setOutfits((prev)=> prev.filter((outfit)=> outfit._id !== id));
-        alert("Outfit deleted Successfully!")
+        toast.success("Outfit deleted Successfully!")
     }catch(err){
         console.log(err);
     }

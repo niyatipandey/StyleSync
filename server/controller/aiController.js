@@ -31,36 +31,27 @@ async function handleAiSuggestion(req,res) {
         `).join("\n")
 
         const prompt = `
-            You are an expert fashion stylist.
+            You are an expert fashion stylist specializing in women's editorial fashion.
 
-            The user has already selected:
+            The user has already selected these items for their outfit:
+            ${filledDescription || "Nothing selected yet — suggest a complete starting look."}
 
-            Top: ${req.body.top || "None"}
-            Bottom: ${req.body.bottom || "None"}
-            Shoes: ${req.body.shoes || "None"}
-            Accessory: ${req.body.accessory || "None"}
+            Your task is to suggest ONE item for each of these missing slots: ${missingCategories.join(', ')}
 
-            The following clothing items are available in the wardrobe:
+            Guidelines:
+            - Match colors that complement the existing items
+            - Match the formality level (casual with casual, formal with formal)
+            - Consider the season and occasion of existing items
+            - Prioritize harmony and cohesion over individual statement pieces
 
-            ${wardrobeText}
+            Available wardrobe items by category:
+            ${JSON.stringify(grouped, null, 2)}
 
-            IMPORTANT RULES:
+            Return ONLY a valid JSON object with the missing slot names as keys and the item's "id" field as the value.
+            Do not include filled slots. Do not include markdown. Do not include explanations.
 
-            1. Recommend ONLY from the available wardrobe above.
-            2. Never invent clothing items.
-            3. Recommend ONLY for missing slots.
-            4. Return ONLY valid JSON.
-            5. Do not include markdown or explanations.
-
-            Return in this format:
-
-            {
-            "top": null,
-            "bottom": null,
-            "shoes": "",
-            "accessory": ""
-            }
-            `;
+            Example format if bottom and shoes are missing:
+            {"bottom": "wb003", "shoes": "ws001"}`
         const response = await ai.models.generateContent({
             model: "gemini-3.5-flash",
             contents:prompt,
