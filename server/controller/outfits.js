@@ -20,7 +20,7 @@ async function handleGetOutfit(req,res){
 
 async function handlePostOutfit(req,res){
     try{
-        console.log("body : ",req.body)
+
         const top = req.body.top || null;
         const bottom = req.body.bottom || null;
         const shoes = req.body.shoes || null;

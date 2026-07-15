@@ -9,9 +9,7 @@ const womenAccessories = require('./data/womenAccessories.json')
 
 async function seed() {
     try{
-        console.log(process.env.MONGO_URL)
         await mongoose.connect(process.env.MONGO_URL)
-        console.log("MongoDB Connected");
         await ClothingItem.deleteMany({})
         const items =[
             ...womentops,
@@ -20,7 +18,6 @@ async function seed() {
             ...womenAccessories
         ]
         await ClothingItem.insertMany(items)
-        console.log(`${items.length} items seeded`);
         
         process.exit(0);
     }catch(err){

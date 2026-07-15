@@ -1,309 +1,304 @@
 # Layrd 👗✨
 
-**Build your wardrobe. Style your look.**
+> **Build your wardrobe. Style your look.**
 
-Layrd is a full-stack MERN outfit planning application that helps users build outfits from a digital wardrobe. Browse curated clothing, drag pieces onto an interactive outfit canvas, save complete looks, and receive AI-powered outfit recommendations using Gemini.
+Layrd is a full-stack MERN wardrobe and outfit planning application that
+helps users visually create outfits from a curated digital wardrobe.
+Users can browse clothing, drag pieces onto an interactive outfit
+canvas, save complete looks, and receive AI-powered outfit
+recommendations generated from **their own wardrobe** using Gemini.
 
-![Status](https://img.shields.io/badge/status-active%20development-orange?style=flat-square)
+![Status](https://img.shields.io/badge/status-v1%20complete-success?style=flat-square)
 ![Stack](https://img.shields.io/badge/stack-MERN-blue?style=flat-square)
 ![AI](https://img.shields.io/badge/AI-Gemini-purple?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
----
+------------------------------------------------------------------------
 
-# 📚 Table of Contents
+# 🚀 Live Demo
 
-- Features
-- Tech Stack
-- Database Models
-- API Reference
-- Backend Status
-- Project Structure
-- Roadmap
-- Why Layrd
+**Frontend:** *(Add Vercel URL)*
 
----
+**Backend:** *(Add Render URL)*
+
+------------------------------------------------------------------------
+
+# 📸 Screenshots
+
+> Add screenshots here after deployment.
+
+-   Landing Page
+-   Login
+-   Library
+-   Outfit Builder
+-   Wardrobe
+
+------------------------------------------------------------------------
 
 # ✨ Features
 
 ## 🔐 Authentication
 
-- User registration
-- User login
-- JWT authentication
-- Password hashing using bcrypt
-- Protected routes
-- User-specific wardrobe and outfits
-
----
+-   User Registration & Login
+-   JWT Authentication
+-   Password Hashing (bcrypt)
+-   Protected Routes
+-   User-specific saved outfits
 
 ## 👗 Clothing Library
 
-- Browse curated wardrobe collection
-- Filter clothing by category
-- Rich clothing metadata
-  - Style
-  - Occasion
-  - Season
-  - Color
-- Editorial-quality clothing images
-
----
+-   Browse curated wardrobe
+-   Category filters
+-   Search clothing
+-   Premium editorial UI
+-   Rich clothing metadata
 
 ## 🎨 Outfit Builder
 
-- Interactive drag-and-drop canvas
-- Four outfit slots
-  - Top
-  - Bottom
-  - Shoes
-  - Accessory
-- Category validation while dragging
-- Replace outfit pieces
-- Remove individual pieces
-- Clear entire outfit
-- Save outfits
-
----
+-   Drag & Drop interface
+-   Four dedicated outfit slots
+-   Category validation
+-   Replace/remove items
+-   Clear outfit
+-   Save complete outfits
 
 ## 🧥 My Wardrobe
 
-- View saved outfits
-- Outfit preview cards
-- Delete outfits
-- User-specific wardrobe storage
-
----
+-   View saved outfits
+-   Outfit preview cards
+-   Delete saved outfits
+-   User-specific wardrobe
 
 ## 🤖 AI Stylist
 
-- Powered by Gemini
-- Completes incomplete outfits
-- Suggests only clothing available in the user's wardrobe
-- Recommendations based on
-  - Style
-  - Occasion
-  - Season
-  - Color compatibility
-- Automatically fills missing outfit slots on the canvas
+-   Powered by Gemini
+-   Detects missing outfit categories
+-   Suggests only wardrobe items
+-   Considers style, occasion, season and color compatibility
+-   Automatically fills missing outfit slots
 
----
+------------------------------------------------------------------------
 
 # 🛠 Tech Stack
 
-| Layer | Technology |
-|--------|------------|
-| Frontend | React, Vite, Tailwind CSS |
-| Backend | Node.js, Express.js |
-| Database | MongoDB, Mongoose |
-| Authentication | JWT, bcryptjs |
-| AI | Gemini API |
-| Drag & Drop | @dnd-kit/core |
+  Layer            Technology
+  ---------------- ---------------------------
+  Frontend         React, Vite, Tailwind CSS
+  Backend          Node.js, Express.js
+  Database         MongoDB, Mongoose
+  Authentication   JWT, bcryptjs
+  AI               Gemini API
+  Drag & Drop      @dnd-kit/core
 
----
+------------------------------------------------------------------------
+
+# 🤖 AI Recommendation Pipeline
+
+Unlike traditional AI outfit generators, Layrd **never invents
+clothing**. Recommendations are restricted to clothing that already
+exists inside the wardrobe.
+
+``` text
+User builds outfit on Canvas
+            │
+            ▼
+Detect missing categories
+            │
+            ▼
+Fetch only matching wardrobe items
+            │
+            ▼
+Convert wardrobe into structured prompt
+            │
+            ▼
+Gemini generates recommendations
+            │
+            ▼
+Validate returned item names
+against MongoDB
+            │
+            ▼
+Return complete clothing objects
+            │
+            ▼
+Automatically fill canvas
+```
+
+### Pipeline
+
+1.  User drags clothing onto the outfit canvas.
+2.  Backend identifies missing categories.
+3.  MongoDB returns only relevant clothing items.
+4.  Backend converts wardrobe into structured context.
+5.  Gemini receives:
+    -   Current outfit
+    -   Available wardrobe
+    -   Style rules
+    -   JSON response instructions
+6.  Gemini returns structured JSON.
+7.  Backend validates returned names against MongoDB.
+8.  Complete clothing documents are returned.
+9.  Frontend updates the missing outfit slots.
+
+------------------------------------------------------------------------
+
+# 🏗 Architecture
+
+``` text
+React Frontend
+      │
+      ▼
+Express REST API
+      │
+      ├────────► MongoDB
+      │
+      └────────► Gemini API
+                   │
+                   ▼
+          Recommendation JSON
+                   │
+                   ▼
+        MongoDB Validation
+                   │
+                   ▼
+            React Canvas
+```
+
+------------------------------------------------------------------------
 
 # 📂 Database Models
 
-<details>
-<summary><strong>User</strong></summary>
+### User
 
-```json
+``` json
 {
-  "name": "String",
-  "email": "String",
-  "passwordHash": "String"
+  "name":"String",
+  "email":"String",
+  "passwordHash":"String"
 }
 ```
 
-</details>
+### ClothingItem
 
-<details>
-<summary><strong>ClothingItem</strong></summary>
-
-```json
+``` json
 {
-  "name": "String",
-  "category": "String",
-  "subCategory": "String",
-  "style": ["String"],
-  "occasion": ["String"],
-  "season": ["String"],
-  "color": "String",
-  "material": "String",
-  "fit": "String",
-  "formality": "Number",
-  "warmth": "Number",
-  "layering": "Boolean",
-  "tags": ["String"],
-  "imageUrl": "String"
+  "name":"String",
+  "category":"String",
+  "subCategory":"String",
+  "style":["String"],
+  "occasion":["String"],
+  "season":["String"],
+  "color":"String",
+  "imageUrl":"String"
 }
 ```
 
-</details>
+### Outfit
 
-<details>
-<summary><strong>Outfit</strong></summary>
-
-```json
+``` json
 {
-  "userId": "ObjectId → User",
-  "slots": {
-    "top": "ObjectId → ClothingItem",
-    "bottom": "ObjectId → ClothingItem",
-    "shoes": "ObjectId → ClothingItem",
-    "accessory": "ObjectId → ClothingItem"
-  }
+  "userId":"ObjectId",
+  "top":"ObjectId",
+  "bottom":"ObjectId",
+  "shoes":"ObjectId",
+  "accessory":"ObjectId"
 }
 ```
 
-Each outfit stores ObjectId references to clothing items, populated when fetching saved outfits.
-
-</details>
-
----
+------------------------------------------------------------------------
 
 # 📡 API Reference
 
-## Authentication
+  Method   Endpoint              Description
+  -------- --------------------- ----------------------
+  POST     /auth/register        Register user
+  POST     /auth/login           Login
+  GET      /items                Fetch clothing
+  GET      /items?category=top   Category filter
+  POST     /outfits              Save outfit
+  GET      /outfits              Get outfits
+  DELETE   /outfits/:id          Delete outfit
+  POST     /ai/suggest           AI outfit completion
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/auth/register` | Register a new user |
-| POST | `/auth/login` | Login and receive JWT |
+------------------------------------------------------------------------
 
----
+# ⚙ Technical Challenges
 
-## Clothing Items
+-   Designing structured prompts for consistent JSON responses.
+-   Preventing AI from recommending unavailable clothing.
+-   Mapping Gemini responses back to MongoDB documents.
+-   Building drag-and-drop interactions with category validation.
+-   Maintaining user-specific wardrobes using JWT authentication.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/items` | Get all clothing items |
-| GET | `/items?category=top` | Filter by category |
-| GET | `/items/:id` | Get clothing item details |
-
----
-
-## Outfits *(Protected)*
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/outfits` | Save outfit |
-| GET | `/outfits` | Get user's outfits |
-| DELETE | `/outfits/:id` | Delete outfit |
-
----
-
-## AI *(Protected)*
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/ai/suggest` | Complete missing outfit slots using Gemini |
-
----
-
-# ✅ Backend Status
-
-- [x] MongoDB integration
-- [x] JWT authentication
-- [x] Authentication middleware
-- [x] Password hashing
-- [x] Clothing API
-- [x] Outfit CRUD API
-- [x] User-specific data
-- [x] MongoDB seed script
-- [x] Gemini AI integration
-- [x] AI recommendation endpoint
-- [x] MongoDB item matching
-- [x] Postman tested
-
----
+------------------------------------------------------------------------
 
 # 📁 Project Structure
 
-```
+``` text
 Layrd/
-
 ├── client/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   └── utils/
-│
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   └── utils/
 └── server/
     ├── controllers/
     ├── middleware/
     ├── models/
     ├── routes/
-    ├── services/
     ├── data/
-    ├── seed.js
-    └── index.js
+    ├── services/
+    └── seed.js
 ```
 
----
+------------------------------------------------------------------------
 
-# 🗺 Roadmap
+# 📈 Current Improvements
 
-## ✅ Completed
+-   Responsive design
+-   Loading states
+-   Toast notifications
+-   Final UI polish
+-   Deployment
 
-- Project setup
-- JWT authentication
-- MongoDB database
-- Clothing library
-- Outfit CRUD API
-- Drag-and-drop outfit builder
-- Category validation
-- Outfit editing
-- Save outfits
-- Wardrobe page
-- Delete outfits
-- Gemini AI Stylist
+------------------------------------------------------------------------
 
----
+# 📖 What I Learned
 
-## 🚧 In Progress
+-   Building JWT authentication.
+-   Designing REST APIs.
+-   MongoDB data modeling with Mongoose.
+-   Drag-and-drop interfaces using @dnd-kit.
+-   Prompt engineering for structured AI responses.
+-   Integrating Gemini into a complete application workflow.
+-   Building an end-to-end MERN project from idea to deployment.
 
-- Search functionality
-- Loading states
-- Responsive design
-- UI polish
-- Animations
-
----
-
-## 🔜 Planned
-
-- AI explanation for outfit recommendations
-- Toast notifications
-- Empty states
-- Deployment
-  - Frontend → Vercel
-  - Backend → Render
-
----
+------------------------------------------------------------------------
 
 # 💡 Why Layrd?
 
-Most wardrobe applications focus on helping users organize clothes.
+Most wardrobe applications focus on organizing clothes.
 
-**Layrd focuses on creating complete outfits.**
+**Layrd focuses on creating outfits.**
 
-Users can visually build looks using an interactive drag-and-drop canvas, save personalized outfits, and use an AI Stylist powered by Gemini to intelligently complete missing pieces using only items available in their own wardrobe.
+Instead of simply storing clothing, users can visually build outfits on
+an interactive canvas while an AI stylist intelligently completes
+missing pieces using only items already available in the wardrobe.
 
 The goal is to make outfit planning simple, visual, and personal.
 
----
+------------------------------------------------------------------------
 
 # 📌 Status
 
-> 🚧 Core functionality is completed. The project is currently focused on UI polish, responsiveness, and deployment.
+✅ Version 1 Complete
 
----
+Current focus: - Responsive improvements - Final UI polish -
+Deployment
 
-<div align="center">
+------------------------------------------------------------------------
 
-**Built with ❤️ using React · Node.js · MongoDB · Gemini AI**
-
-</div>
+::: {align="center"}
+**Built with ❤️ using React • Node.js • MongoDB • Gemini AI**
+:::

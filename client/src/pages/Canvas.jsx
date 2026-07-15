@@ -63,7 +63,6 @@ const Canvas = () => {
         alert(result.message);
         return;
       }
-      console.log(result)
       alert("Outfit saved successfully!")
     }catch(err){
       console.log(err);

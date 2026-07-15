@@ -12,7 +12,6 @@ const Wardrobe = () => {
 
   async function getOutfit(){
     try{
-      console.log(outfits)
       const response = await fetch(`${BASE_URL}/outfits`,{
         headers: getAuthHeader()
       })
@@ -20,7 +19,6 @@ const Wardrobe = () => {
         return;
       }
       const data = await response.json();
-      console.log(data);
       setOutfits(data);
     }catch(err){
       console.log(err);

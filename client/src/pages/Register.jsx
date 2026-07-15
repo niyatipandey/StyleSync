@@ -15,7 +15,6 @@ const Register = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setError("")
-        console.log("button clicked");
         try{
             const result = await fetch(`${BASE_URL}/auth/register`,{
                 method:'post',
