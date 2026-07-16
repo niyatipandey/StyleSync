@@ -1,17 +1,3 @@
-/**
- * Layrd — Landing Page (v2)
- * Matches landing_page_1.png exactly
- *
- * Assets needed in src/assets/:
- *   LANDING_PAGE_GIRL.png
- *   LANDING_PAGE_AI_BOX.png
- *
- * Fonts in index.css:
- *   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
- *
- * npm install framer-motion
- */
-
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import girlImg from "../assets/LANDING_PAGE_GIRL.png";
@@ -21,8 +7,8 @@ import curatedWardrobe from "../assets/curated_wardrobe.png"
 import dragDrop from "../assets/drag_drop_canvas.png"
 import aiSuggest from "../assets/ai_suggestion.png"
 import styleImage from "../assets/style_image.png"
+import { Link } from "react-router-dom";
 
-// ─── Tokens ───────────────────────────────────────────────────────────────────
 const C = {
   bg:       "#F8F5F0",
   card:     "#FDFBF8",
@@ -38,7 +24,6 @@ const C = {
 const serif = "'Playfair Display', Georgia, serif";
 const sans  = "'Inter', system-ui, sans-serif";
 
-// ─── Scroll fade-up ───────────────────────────────────────────────────────────
 function FadeUp({ children, delay = 0, className = "", style = {} }) {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -56,7 +41,6 @@ function FadeUp({ children, delay = 0, className = "", style = {} }) {
   );
 }
 
-// ─── NAVBAR ───────────────────────────────────────────────────────────────────
 function Navbar() {
   const navLinks = [
     { name: "Home", id: "#" },
@@ -103,7 +87,6 @@ function Navbar() {
   );
 }
 
-// ─── HERO ─────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
     <section
@@ -116,7 +99,6 @@ function Hero() {
         alignItems: "stretch",
       }}
     >
-      {/* Background */}
       <div style={{ position: "absolute", inset: 0 }}>
         <img
           src={girlImg}
@@ -149,7 +131,6 @@ function Hero() {
         />
       </div>
 
-      {/* Hero Content */}
       <div
         style={{
           position: "relative",
@@ -266,7 +247,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Floating AI Card */}
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -300,7 +280,6 @@ function Hero() {
   );
 }
 
-// ─── STATS STRIP ─────────────────────────────────────────────────────────────
 const STATS = [
   { icon: "🪝", num: "60+",    label: "Curated Pieces"        },
   { icon: "✦",  num: "AI",     label: "Smart Stylist"         },
@@ -325,8 +304,6 @@ function StatsStrip() {
     </section>
   );
 }
-
-// ─── FEATURES ─────────────────────────────────────────────────────────────────
 
 const FEATURES = [
   {
@@ -416,7 +393,6 @@ function Features() {
                   cursor: "default",
                 }}
               >
-                {/* Image */}
                 <div
                   style={{
                     position: "relative",
@@ -434,7 +410,6 @@ function Features() {
                     }}
                   />
 
-                  {/* Floating Icon */}
                   <div
                     style={{
                       position: "absolute",
@@ -454,8 +429,6 @@ function Features() {
                     {f.icon}
                   </div>
                 </div>
-
-                {/* Content */}
                 <div style={{ padding: "24px" }}>
                   <h3
                     style={{
@@ -489,7 +462,6 @@ function Features() {
   );
 }
 
-// ─── HOW IT WORKS ─────────────────────────────────────────────────────────────
 const STEPS = [
   { n: "01", title: "Browse Pieces",   body: "Explore our collection of curated clothing." },
   { n: "02", title: "Add to Canvas",   body: "Drag and drop your favorite items."          },
@@ -517,8 +489,6 @@ function HowItWorks() {
     </section>
   );
 }
-
-// ─── CTA SPLIT ────────────────────────────────────────────────────────────────
 function CTASplit() {
   return (
     <section
@@ -534,7 +504,6 @@ function CTASplit() {
           minHeight: "380px",
         }}
       >
-        {/* Left Background Image */}
         <div
           style={{
             backgroundImage: `url(${ctaImage})`,
@@ -545,7 +514,6 @@ function CTASplit() {
           }}
         />
 
-        {/* Right CTA */}
         <div
           style={{
             background: "#EDE8E0",
@@ -616,15 +584,10 @@ function CTASplit() {
   );
 }
 
-// ─── FOOTER ───────────────────────────────────────────────────────────────────
-import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <footer className="bg-[#2E2621] text-[#F8F5F0] pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-14">
-
-        {/* Brand */}
         <div className="space-y-5">
           <h2 className="font-serif text-3xl tracking-[0.25em]">
             LAYRD
@@ -635,8 +598,6 @@ function Footer() {
             organize and complete outfits effortlessly.
           </p>
         </div>
-
-        {/* Platform */}
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] text-[#8A8072] mb-5">
             Platform
@@ -657,7 +618,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Resources */}
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] text-[#8A8072] mb-5">
             Resources
@@ -678,7 +638,6 @@ function Footer() {
           </div>
         </div>
 
-        {/* Contact */}
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] text-[#8A8072] mb-5">
             Connect
@@ -727,7 +686,6 @@ function Footer() {
     </footer>
   );
 }
-// ─── PAGE ─────────────────────────────────────────────────────────────────────
 export default function LandingPage() {
   return (
     <div style={{ background: C.bg }}>
