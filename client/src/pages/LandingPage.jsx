@@ -281,7 +281,7 @@ function Hero() {
 }
 
 const STATS = [
-  { icon: "🪝", num: "60+",    label: "Curated Pieces"        },
+  { icon: "🪝", num: "30+",    label: "Curated Pieces"        },
   { icon: "✦",  num: "AI",     label: "Smart Stylist"         },
   { icon: "♡",  num: "20+",  label: "Looks Created"         },
   { icon: "🔖", num: "Save & Organize", label: "Your Favorite Outfits" },
