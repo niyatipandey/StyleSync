@@ -9,15 +9,19 @@ const aiRoute = require('./routes/aiRouter')
 const app = express();
 const port = process.env.PORT || 3000;
 
-const cors = require('cors');
-/*app.use(cors({
+const cors = require("cors");
+
+const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://layrd-eight.vercel.app"
+    "https://layrd-eight.vercel.app",
   ],
-  methods: ["GET", "POST", "PATCH", "DELETE"],
-}));*/
-app.use(cors());
+  methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.static('public'))
 
 app.use(express.urlencoded({extended :false}));
