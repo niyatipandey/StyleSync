@@ -57,11 +57,11 @@ const Wardrobe = () => {
           <h1 className='font-serif text-5xl text-[#2E2621]'>My Wardrobe</h1>
           <p className='text-[#8A8072] mt-2'> Your saved outfits in one place</p>
         </div>
-        <button className="px-5 py-3 rounded-xl bg-[#2E2621] text-white hover:scale-105 transition-all"
+        <button className="cursor-pointer px-5 py-3 rounded-xl bg-[#2E2621] text-white hover:scale-105 transition-all"
         onClick={() => navigate("/canvas")}>
           + New Outfit
         </button>
-        <div className='grid grid-cols-3 gap-6 mt-8'>
+        <div className='grid grid-cols-3 gap-6 mt-8 p-3'>
           {outfits.map((outfit)=>(
             <OutfitCard key={outfit._id} outfit={outfit}
             onDelete={()=> deleteOutfit(outfit._id)} />

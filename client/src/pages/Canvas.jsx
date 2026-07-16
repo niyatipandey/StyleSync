@@ -194,13 +194,13 @@ const Canvas = () => {
               </div>
             </div>
             <div className='flex flex-col gap-5 items-start w-[180px] pt-12'>
-              <button className='w-full py-3 rounded-xl bg-[#2E2621] text-white hover:scale-105 transition-all'
+              <button className='cursor-pointer w-full py-3 rounded-xl bg-[#2E2621] text-white hover:scale-105 transition-all'
                   onClick={()=>{
                     saveOutfit();
                   }}>Save Outfit</button>
                   <button
                 disabled={isStyling}
-                className={`w-full py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-2
+                className={`cursor-pointer w-full py-3 rounded-xl font-medium transition-all flex items-center justify-center gap-2
                 ${
                   isStyling
                     ? "bg-gray-300 text-[#2E2621] cursor-not-allowed"
@@ -216,7 +216,7 @@ const Canvas = () => {
                   "✨ AI Stylist"
                 )}
               </button>
-              <button className='w-full py-3 rounded-xl border border-[#DDD5C7] bg-white hover:scale-105 transition-all'
+              <button className='cursor-pointer w-full py-3 rounded-xl border border-[#DDD5C7] bg-white hover:scale-105 transition-all'
               onClick={()=>{
                 setSelectedOutfit({
                   top:null,
