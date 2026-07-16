@@ -67,13 +67,13 @@ async function handleAiSuggestion(req, res) {
             Example format if bottom and shoes are missing:
             {"bottom": "wb003", "shoes": "ws001"}
             `
-
+        console.log("API KEY:", process.env.GEMINI_API_KEY?.slice(0, 10))
         const response = await ai.models.generateContent({
             model: "gemini-3.5-flash",
             contents: prompt,
         })
 
-        const rawText = response.text.replace(/```json|```/g, '').trim()
+        const rawText = response.text
 
         let suggestions
         try {
