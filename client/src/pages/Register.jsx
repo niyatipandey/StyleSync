@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { BASE_URL, getJsonRequest } from "../utils/api";
 import { useNavigate } from 'react-router-dom'
-import { Mail, Lock, Globe, ChevronDown, ArrowRight,Apple,User } from 'lucide-react';
+import { Mail, Lock ,User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import registerImg from '../assets/register_outfit_page.png'
 import toast from 'react-hot-toast';
@@ -40,29 +40,28 @@ const Register = () => {
 
   return (
       <div
-        className="h-screen w-screen overflow-hidden flex justify-end"
+        className="min-h-screen w-full flex justify-end"
         style={{
-          backgroundImage: `url(${registerImg})`,
+          backgroundImage: window.innerWidth >= 768 ? `url(${registerImg})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center 28%",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="w-full md:w-[44%] lg:w-[38%] bg-[#F5F1EA] md:rounded-3xl md:m-4 shadow-2xl flex flex-col px-8 sm:px-14 py-6">
+        <div className="w-full md:w-[44%] lg:w-[38%] bg-[#F5F1EA] md:rounded-3xl md:m-4 shadow-2xl flex flex-col px-6 sm:px-10 lg:px-14 py-6">
   
-          <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
+          <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full py-8">
   
-            <h1 className="font-serif text-6xl text-[#2E2621]">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2E2621]">
               Layrd
             </h1>
+            <p className="text-[#8A8072] text-sm mt-2 mb-6">
+              Build your wardrobe. Create your style.
+            </p>
   
-            <h2 className="font-serif text-3xl text-[#2E2621]">
+            <h2 className="font-serif text-2xl md:text-3xl text-[#2E2621] mb-2">
                 Create your account
             </h2>
-
-            <p className="text-[#8A8072] text-sm mt-2 mb-6">
-                Build your wardrobe and start styling with AI.
-            </p>
   
   
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -112,36 +111,9 @@ const Register = () => {
                 type="submit"
                 className="cursor-pointer w-full bg-[#2E2621] text-white rounded-xl py-3 font-medium hover:bg-[#3A332B] transition"
               >
-                Sign In
+                Create Account
               </button>
             </form>
-  
-            <div className="flex items-center gap-4 my-6">
-              <div className="flex-1 h-px bg-[#DDD5C7]" />
-              <span className="text-xs text-[#8A8072]">
-                or continue with
-              </span>
-              <div className="flex-1 h-px bg-[#DDD5C7]" />
-            </div>
-  
-            <div className="flex justify-center">
-  
-              <button
-                type="button"
-                className="w-72 flex items-center justify-center gap-2 border border-[#DDD5C7] rounded-xl py-3 bg-white hover:bg-[#FAF8F4] transition"
-              >
-                <img
-                  src="https://www.google.com/favicon.ico"
-                  alt="Google"
-                  className="w-4 h-4"
-                />
-  
-                Google
-              </button>
-
-  
-            </div>
-  
             <p className="text-center text-sm text-[#3A332B] mt-6">
               Already have an account?{" "}
   

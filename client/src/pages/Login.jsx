@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import loginImage from '../assets/login_outfit_page.png'
 import { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
-import { Mail, Lock, Globe, ChevronDown, ArrowRight,Apple } from 'lucide-react';
+import { Mail, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
@@ -45,25 +45,25 @@ const Login = () => {
     <div
       className="h-screen w-screen overflow-hidden flex justify-end"
       style={{
-        backgroundImage: `url(${loginImage})`,
+        backgroundImage: window.innerWidth >= 768 ? `url(${loginImage})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="w-full md:w-[44%] lg:w-[38%] bg-[#F5F1EA] md:rounded-3xl md:m-4 shadow-2xl flex flex-col px-8 sm:px-14 py-6">
+      <div className="w-full md:w-[44%] lg:w-[38%] bg-[#F5F1EA] md:rounded-3xl md:m-4 shadow-2xl flex flex-col px-6 sm:px-10 lg:px-14 py-6">
 
-        <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
+        <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full py-8">
 
-          <h1 className="font-serif text-6xl text-[#2E2621]">
-            Layrd
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2E2621]">
+           Layrd
           </h1>
 
           <p className="text-[#8A8072] text-sm mt-2 mb-10">
             Build your wardrobe. Create your style
           </p>
 
-          <h2 className="font-serif text-3xl text-[#2E2621]">
+          <h2 className="font-serif text-2xl sm:text-3xl text-[#2E2621]">
             Welcome back
           </h2>
 
@@ -85,7 +85,6 @@ const Login = () => {
               />
             </div>
 
-            {/* Password */}
             <div className="flex items-center gap-3 border border-[#DDD5C7] rounded-xl px-4 py-3 bg-white">
               <Lock size={16} className="text-[#8A8072]" />
 
@@ -111,29 +110,6 @@ const Login = () => {
               Log In
             </button>
           </form>
-
-          <div className="flex items-center gap-4 my-6">
-            <div className="flex-1 h-px bg-[#DDD5C7]" />
-            <span className="text-xs text-[#8A8072]">
-              or continue with
-            </span>
-            <div className="flex-1 h-px bg-[#DDD5C7]" />
-          </div>
-          <div className="flex justify-center">
-
-            <button
-              type="button"
-              className="w-72 flex items-center justify-center gap-2 border border-[#DDD5C7] rounded-xl py-3 bg-white hover:bg-[#FAF8F4] transition"
-            >
-              <img
-                src="https://www.google.com/favicon.ico"
-                alt="Google"
-                className="w-4 h-4"
-              />
-
-              Google
-            </button>
-          </div>
           <p className="text-center text-sm text-[#3A332B] mt-6">
             New to Layrd?{" "}
 
