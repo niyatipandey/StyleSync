@@ -28,17 +28,8 @@ const Navbar = () => {
                         isActive
                         ? "font-bold text-[#4B4138]"
                         : "text-[#2E2621] hover:text-[#E7C76A]"
-                    }`
-                    }>
-                    {({ isActive }) => (
-                        <>
-                        Library
-                        <span
-                            className={`absolute left-0 -bottom-1 h-0.5 bg-black transition-all duration-200 ${
-                            isActive ? "w-full opacity-100" : "w-0 opacity-0"
-                            }`}/>
-                        </>
-                    )}
+                    }`}>
+                    Library
                 </NavLink>
                 <NavLink
                     to="/canvas"
@@ -47,17 +38,8 @@ const Navbar = () => {
                         isActive
                         ? "font-bold text-[#4B4138]"
                         : "text-[#2E2621] hover:text-[#E7C76A]"
-                    }`
-                    }>
-                    {({ isActive }) => (
-                        <>
-                        Canvas
-                        <span
-                            className={`absolute left-0 -bottom-1 h-0.5 bg-black transition-all duration-200 ${
-                            isActive ? "w-full opacity-100" : "w-0 opacity-0"
-                            }`}/>
-                        </>
-                    )}
+                    }`}>
+                    Canvas
                 </NavLink>
                 <NavLink
                     to="/wardrobe"
@@ -66,17 +48,8 @@ const Navbar = () => {
                         isActive
                         ? "font-bold text-[#4B4138]"
                         : "text-[#2E2621] hover:text-[#E7C76A]"
-                    }`
-                    }>
-                    {({ isActive }) => (
-                        <>
-                        Wardrobe
-                        <span
-                            className={`absolute left-0 -bottom-1 h-0.5 bg-black transition-all duration-200 ${
-                            isActive ? "w-full opacity-100" : "w-0 opacity-0"
-                            }`}/>
-                        </>
-                    )}
+                    }`}>
+                    Wardrobe
                 </NavLink>
             </div>
             <div className="flex items-center gap-6">
