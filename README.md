@@ -6,11 +6,11 @@ Layrd is a full-stack MERN wardrobe and outfit planning application that
 helps users visually create outfits from a curated digital wardrobe.
 Users can browse clothing, drag pieces onto an interactive outfit
 canvas, save complete looks, and receive AI-powered outfit
-recommendations generated from **their own wardrobe** using Gemini.
+recommendations generated from **their own wardrobe** using Groq.
 
 ![Status](https://img.shields.io/badge/status-v1%20complete-success?style=flat-square)
 ![Stack](https://img.shields.io/badge/stack-MERN-blue?style=flat-square)
-![AI](https://img.shields.io/badge/AI-Gemini-purple?style=flat-square)
+![AI](https://img.shields.io/badge/AI-Groq-purple?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 ------------------------------------------------------------------------
@@ -78,7 +78,7 @@ recommendations generated from **their own wardrobe** using Gemini.
 
 ## 🤖 AI Stylist
 
--   Powered by Gemini
+-   Powered by Groq
 -   Detects missing outfit categories
 -   Suggests only wardrobe items
 -   Considers style, occasion, season and color compatibility
@@ -94,7 +94,7 @@ recommendations generated from **their own wardrobe** using Gemini.
   Backend          Node.js, Express.js
   Database         MongoDB, Mongoose
   Authentication   JWT, bcryptjs
-  AI               Gemini API
+  AI               Groq API
   Drag & Drop      @dnd-kit/core
 
 ------------------------------------------------------------------------
@@ -118,7 +118,7 @@ Fetch only matching wardrobe items
 Convert wardrobe into structured prompt
             │
             ▼
-Gemini generates recommendations
+Groq generates recommendations
             │
             ▼
 Validate returned item names
@@ -137,12 +137,12 @@ Automatically fill canvas
 2.  Backend identifies missing categories.
 3.  MongoDB returns only relevant clothing items.
 4.  Backend converts wardrobe into structured context.
-5.  Gemini receives:
+5.  Groq receives:
     -   Current outfit
     -   Available wardrobe
     -   Style rules
     -   JSON response instructions
-6.  Gemini returns structured JSON.
+6.  Groq returns structured JSON.
 7.  Backend validates returned names against MongoDB.
 8.  Complete clothing documents are returned.
 9.  Frontend updates the missing outfit slots.
@@ -159,7 +159,7 @@ Express REST API
       │
       ├────────► MongoDB
       │
-      └────────► Gemini API
+      └────────► Groq API
                    │
                    ▼
           Recommendation JSON
@@ -233,7 +233,7 @@ Express REST API
 
 -   Designing structured prompts for consistent JSON responses.
 -   Preventing AI from recommending unavailable clothing.
--   Mapping Gemini responses back to MongoDB documents.
+-   Mapping Groq responses back to MongoDB documents.
 -   Building drag-and-drop interactions with category validation.
 -   Maintaining user-specific wardrobes using JWT authentication.
 
@@ -266,7 +266,7 @@ Layrd/
 -   MongoDB data modeling with Mongoose.
 -   Drag-and-drop interfaces using @dnd-kit.
 -   Prompt engineering for structured AI        responses.
--   Integrating Gemini into a complete application workflow.
+-   Integrating Groq into a complete application workflow.
 -   Building an end-to-end MERN project from idea to deployment.
 
 ------------------------------------------------------------------------

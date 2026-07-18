@@ -1,4 +1,4 @@
-# StyleSync Software Architecture
+# Layrd System Architecture
 
 > **Goal:** Production-ready architecture for StyleSync. This document contains only design decisions and architecture. No implementation code.
 
@@ -198,8 +198,8 @@ middleware/auth.js
 
 One addition:
 
-- `ai.js` service file inside controllers handles the Gemini call in isolation.
-- The AI controller calls this service, not Gemini directly.
+- `ai.js` service file inside controllers handles the Groq call in isolation.
+- The AI controller calls this service, not Groq directly.
 - This makes the AI logic testable and swappable.
 
 Rate limiting sits only on `/ai/suggest` using **express-rate-limit**.
@@ -349,7 +349,7 @@ POST `/ai/suggest`
 
 ### 5.
 
-Backend builds Gemini prompt
+Backend builds Groq prompt
 
 ```text
 Given this outfit item: [filled slot details]
@@ -373,7 +373,7 @@ Available accessories: [...]
 
 ### 6.
 
-Gemini returns JSON string.
+Groq returns JSON string.
 
 ↓
 
@@ -407,7 +407,7 @@ AI-filled slots display an AI indicator.
 
 ---
 
-The prompt explicitly tells Gemini to return only a JSON object — no prose.
+The prompt explicitly tells Groq to return only a JSON object — no prose.
 
 Always parse with `try/catch`.
 
