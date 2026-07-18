@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import Navbar from '../components/Navbar'
 import ClothingPanel from '../components/ClothingPanel'
 import CanvasSlot from '../components/CanvasSlot'
-import { DndContext, PointerSensor,useSensor,useSensors,TouchSensor } from '@dnd-kit/core'
+import { DndContext, PointerSensor,useSensor,useSensors} from '@dnd-kit/core'
 import { BASE_URL, getAuthHeader } from '../utils/api'
 import { Loader2 } from "lucide-react";
 import { toast } from "react-hot-toast";
@@ -39,6 +39,13 @@ const Canvas = () => {
       [over.id]: draggedItem,
     }))
   }
+
+  const handleMobileSelect = (item) => {
+    setSelectedOutfit(prev => ({
+      ...prev,
+      [categoryMap[item.category]]: item
+    }));
+  };
 
 
   async function saveOutfit() {
@@ -133,12 +140,6 @@ const Canvas = () => {
         distance: 8,
       }
     }),
-    useSensor(TouchSensor, {
-      activationConstraint: {
-        delay:150,
-        tolerance:8,
-      }
-    })
   )
 
   return (
@@ -153,7 +154,7 @@ const Canvas = () => {
           <div className='flex flex-col lg:flex-row gap-10 items-start'>
             <div className='w-full lg:w-[35%]'>
               <h3 className="text-xl font-semibold text-[#2E2621] mb-5">Wardrobe Selection</h3>
-              <ClothingPanel columns={2} mobileScroll={true} desktopScroll={true} showAllCategory={false} />
+              <ClothingPanel columns={2} mobileScroll={true} desktopScroll={true} showAllCategory={false} onSelect={handleMobileSelect} />
             </div>
             <div className='w-full lg:flex-1 min-w-0'>
               <h3 className="text-xl font-semibold text-[#2E2621] mb-6">Canvas</h3>

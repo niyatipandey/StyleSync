@@ -17,6 +17,14 @@ const ClothingCard = ({ item }) => {
     opacity: isDragging ? 0.85 : 1,
   };
 
+  const isMobile = window.innerWidth < 768;
+
+  const handleClick = () => {
+    if (!isMobile) return;
+
+    onSelect(item);
+  };
+
   return (
     <div
       ref={setNodeRef}

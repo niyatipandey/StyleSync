@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../utils/api";
 import ClothingCard from "./ClothingCard";
 
-const ClothingPanel = ({columns,desktopScroll="",showAllCategory,mobileScroll,searchQuery = ""}) => {
+const ClothingPanel = ({columns,desktopScroll="",showAllCategory,mobileScroll,searchQuery = "",onSelect}) => {
   const [activeCategory, setActiveCategory] = useState("top");
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -83,7 +83,7 @@ const ClothingPanel = ({columns,desktopScroll="",showAllCategory,mobileScroll,se
           <div
             key={item._id}
             className="w-28 sm:w-32 lg:max-w-none lg:w-full mx-auto">
-            <ClothingCard item={item} />
+            <ClothingCard item={item} onSelect={onSelect}/>
           </div>
         ))}
       </div>

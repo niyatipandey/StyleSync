@@ -86,7 +86,7 @@ const Hero = ({C,serif,sans}) => {
                 >
                 <Link
                     to="/library"
-                    className="flex w-fit items-center gap-2 rounded-lg bg-[#2E2621] px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-[#243C47]"
+                    className="flex w-fit items-center gap-2 rounded-lg bg-[#2E2621] px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-[#B88A2A]"
                 >
                     Start Styling →
                 </Link>
