@@ -17,21 +17,28 @@ recommendations generated from **their own wardrobe** using Gemini.
 
 # 🚀 Live Demo
 
-**Frontend:** *(Add Vercel URL)*
+**Frontend:** *[Click Here](https://layrd-eight.vercel.app)*
 
-**Backend:** *(Add Render URL)*
+**Backend:** *[Click Here](https://layrd-backend.onrender.com)*
 
 ------------------------------------------------------------------------
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-> Add screenshots here after deployment.
+### 🏠 Landing Page
+![Landing Page](./screenshots/landing-page.png)
 
--   Landing Page
--   Login
--   Library
--   Outfit Builder
--   Wardrobe
+### 👗 Clothing Library
+![Clothing Library](./screenshots/clothing-library.png)
+
+### 🎨 Outfit Builder
+![Outfit Builder](./screenshots/outfit-builder.png)
+
+### 🤖 AI Stylist
+![AI Stylist](./screenshots/ai-stylist.png)
+
+### 🧥 My Wardrobe
+![My Wardrobe](./screenshots/my-wardrobe.png)
 
 ------------------------------------------------------------------------
 
@@ -252,25 +259,13 @@ Layrd/
     └── seed.js
 ```
 
-------------------------------------------------------------------------
-
-# 📈 Current Improvements
-
--   Responsive design
--   Loading states
--   Toast notifications
--   Final UI polish
--   Deployment
-
-------------------------------------------------------------------------
-
 # 📖 What I Learned
 
 -   Building JWT authentication.
 -   Designing REST APIs.
 -   MongoDB data modeling with Mongoose.
 -   Drag-and-drop interfaces using @dnd-kit.
--   Prompt engineering for structured AI responses.
+-   Prompt engineering for structured AI        responses.
 -   Integrating Gemini into a complete application workflow.
 -   Building an end-to-end MERN project from idea to deployment.
 
@@ -288,17 +283,7 @@ missing pieces using only items already available in the wardrobe.
 
 The goal is to make outfit planning simple, visual, and personal.
 
-------------------------------------------------------------------------
-
-# 📌 Status
-
-✅ Version 1 Complete
-
-Current focus: - Responsive improvements - Final UI polish -
-Deployment
-
-------------------------------------------------------------------------
 
 ::: {align="center"}
-**Built with ❤️ using React • Node.js • MongoDB • Gemini AI**
+**Built with ❤️ using React • Node.js • MongoDB • Groq API**
 :::
