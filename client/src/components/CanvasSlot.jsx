@@ -1,4 +1,3 @@
-CanvasSlot.displayName = "CanvasSlot";
 import React , {forwardRef} from "react";
 import { useDroppable } from "@dnd-kit/core";
 
@@ -53,4 +52,5 @@ const CanvasSlot = forwardRef(
   );
 });
 
+CanvasSlot.displayName = "CanvasSlot";
 export default CanvasSlot;
