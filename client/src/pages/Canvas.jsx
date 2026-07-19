@@ -6,6 +6,7 @@ import { DndContext, PointerSensor,useSensor,useSensors} from '@dnd-kit/core'
 import { BASE_URL, getAuthHeader } from '../utils/api'
 import { Loader2 } from "lucide-react";
 import { toast } from "react-hot-toast";
+import { useState } from 'react'
 
 const Canvas = () => {
 
@@ -13,6 +14,7 @@ const Canvas = () => {
   const bottomRef = useRef(null);
   const shoesRef = useRef(null);
   const accessoryRef = useRef(null);
+  const [highlightSlot, setHighlightSlot] = useState(null)
 
   const [selectedOutfit, setSelectedOutfit] = useState({
     top:null,
@@ -68,6 +70,11 @@ const Canvas = () => {
         })
       },100)
     }
+
+    setHighlightSlot(slot);
+    setTimeout(()=>{
+      setHighlightSlot(null);
+    },700)
   };
 
   async function saveOutfit() {
@@ -188,6 +195,7 @@ const Canvas = () => {
                       ref={topRef}
                       title="Top"
                       selectedItem = {selectedOutfit.top}
+                      highlight={highlightSlot === "top"}
                       onRemove={()=>(
                         setSelectedOutfit((prev)=>({
                           ...prev,
@@ -200,6 +208,7 @@ const Canvas = () => {
                       ref={accessoryRef}
                       title="Accessory"
                       selectedItem = {selectedOutfit.accessory}
+                      highlight={highlightSlot === "accessory"}
                       onRemove={()=>(
                         setSelectedOutfit((prev)=>({
                           ...prev,
@@ -212,6 +221,7 @@ const Canvas = () => {
                     ref={bottomRef}
                     title="Bottom"
                     selectedItem = {selectedOutfit.bottom}
+                    highlight={highlightSlot === "bottom"}
                     onRemove={()=>(
                       setSelectedOutfit((prev)=>({
                         ...prev,
@@ -225,6 +235,7 @@ const Canvas = () => {
                     ref={shoesRef}
                     title="Shoes"
                     selectedItem = {selectedOutfit.shoes}
+                    highlight={highlightSlot === "shoes"}
                     onRemove={()=>(
                       setSelectedOutfit((prev)=>({
                         ...prev,

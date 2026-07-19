@@ -2,7 +2,7 @@ import React , {forwardRef} from "react";
 import { useDroppable } from "@dnd-kit/core";
 
 const CanvasSlot = forwardRef(
-({ icon, title, selectedItem, onRemove }, ref) => {
+({ icon, title, selectedItem,highlight , onRemove }, ref) => {
   const { setNodeRef, isOver } = useDroppable({
     id: title.toLowerCase(),
   });
@@ -20,6 +20,10 @@ const CanvasSlot = forwardRef(
         }
       }}
       className={`relative h-60 sm:h-44  rounded-3xl border-2 border-dashed flex flex-col items-center justify-center overflow-hidden
+      ${highlight
+        ? "ring-4 ring-[#E7C76A] border-[#E7C76A] transition-all duration-300"
+        : ""
+      }
       ${
         isOver
           ? "bg-green-100 border-green-400"
